@@ -1,11 +1,14 @@
 import interactions
 from datetime import datetime
 import asyncio
+import os
+from dotenv import load_dotenv
 from random import randint
-
+load_dotenv()
+token= os.getenv("TOKEN")
 
 bot = interactions.Client(
-    token="ODc5NjIzMTMzOTExNDY1OTk2.YSSa4Q.-O3W2U9OcyN-142NVJC8ehiXUa0",
+    token="token",
     presence=interactions.ClientPresence(
         activities=[
             interactions.PresenceActivity(
