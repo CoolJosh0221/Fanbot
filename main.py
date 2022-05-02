@@ -30,7 +30,7 @@ async def on_ready():
     name="ping",
     description="Ping Pong!"
 )
-async def _ping(ctx: interactions.CommandContext):
+async def ping(ctx: interactions.CommandContext):
     await ctx.send(content="Pong! 🏓")
 
 
@@ -38,7 +38,7 @@ async def _ping(ctx: interactions.CommandContext):
     name="help",
     description="Ask for help"
 )
-async def _help(ctx: interactions.CommandContext):
+async def help(ctx: interactions.CommandContext):
     mention = ctx.author.mention
     member = ctx.author
     await ctx.send(f"{mention} DMed")
@@ -50,7 +50,7 @@ async def _help(ctx: interactions.CommandContext):
     name="support",
     description="Get a link to the support server"
 )
-async def _support(ctx: interactions.CommandContext):
+async def support(ctx: interactions.CommandContext):
     button = [
         interactions.Button(
             style=interactions.ButtonStyle.LINK,
@@ -73,7 +73,7 @@ async def _support(ctx: interactions.CommandContext):
         ),
     ],
 )
-async def _whois(ctx: interactions.CommandContext, user: interactions.Member = None):
+async def whois(ctx: interactions.CommandContext, user: interactions.Member = None):
     if user == None:
         user = ctx.author
     now = datetime.now()
@@ -110,7 +110,7 @@ async def _whois(ctx: interactions.CommandContext, user: interactions.Member = N
     options=[interactions.Option(
         name="choose_one", description="Choose one.", type=interactions.OptionType.STRING, required=True, choices=[interactions.Choice(name="dropdown", value="g_st_menu"), interactions.Choice(name="button", value="g_b")])]
 )
-async def _generate(ctx: interactions.CommandContext, choose_one: str):
+async def generate(ctx: interactions.CommandContext, choose_one: str):
     if choose_one == "g_st_menu":
         print(choose_one)
         select_menu = interactions.SelectMenu(
@@ -144,7 +144,7 @@ async def g_st_menu(ctx: interactions.ComponentContext, option: str):
 @bot.command(
     name="nitrogen",
     description="I'll gift you nitro.")
-async def _nitogen(ctx:interactions.CommandContext):
+async def nitrogen(ctx:interactions.CommandContext):
     button=interactions.Button(
         style=interactions.ButtonStyle.SUCCESS,
         custom_id="accept",
@@ -171,7 +171,7 @@ async def _nitogen(ctx:interactions.CommandContext):
         disabled=True)
     await msg.edit(embeds=embed2, components=button2)
 @bot.command(name="rules", description="Send rules to the channel", scope=877823624315301908)
-async def _rules(ctx):
+async def rules(ctx):
     your_json={
   "content": " ",
   "embeds": [
