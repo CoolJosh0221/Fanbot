@@ -158,7 +158,7 @@ async def _nitogen(ctx:interactions.CommandContext):
         thumbnail=thumbnail
     )
     msg = await ctx.send(embeds=embed, components=button)
-    await asyncio.sleep(randint(25,61))
+    await asyncio.sleep(randint(25,60))
     embed2 = interactions.Embed(
         title="You've been gifted a subscription!",
         description="Hmm, it seems someone already claimed this gift.",
