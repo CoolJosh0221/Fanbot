@@ -23,7 +23,7 @@ bot = interactions.Client(
 
 @bot.event
 async def on_ready():
-    print("Bot is online.")
+    print("Bot is online")
 
 
 @bot.command(
