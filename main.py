@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 from random import randint
 load_dotenv()
-token= os.getenv("TOKEN")
+token = os.getenv("TOKEN")
 
 bot = interactions.Client(
     token = token,
