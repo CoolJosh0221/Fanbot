@@ -1,3 +1,5 @@
+# import logging 
+# logging.basicConfig(filename='debug.log', filemode='w', level=logging.DEBUG)
 import interactions
 from datetime import datetime
 import asyncio
