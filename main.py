@@ -8,7 +8,7 @@ load_dotenv()
 token= os.getenv("TOKEN")
 
 bot = interactions.Client(
-    token=token,
+    token = token,
     presence=interactions.ClientPresence(
         activities=[
             interactions.PresenceActivity(
