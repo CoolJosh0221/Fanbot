@@ -178,11 +178,11 @@ async def nitrogen(ctx:interactions.CommandContext):
 @bot.command(name="rules", description="Send rules to the channel", scope=877823624315301908)
 async def rules(ctx):
     your_json={
-  "content": " ",
+  "content": "",
   "embeds": [
     {
       "title": "Rules",
-      "description": "**Welcome to Fansom!**\nThese are the rules in the server **Fansom**!",
+      "description": "https://cdn.discordapp.com/attachments/898212567636381699/973453156535115807/Untitled.png**Welcome to Fansom!**\nThese are the rules in the server **Fansom**!",
       "color": 16742912,
       "fields": [
         {
@@ -238,5 +238,6 @@ async def rules(ctx):
 }
     embeds = [interactions.Embed(**embed) for embed in your_json["embeds"]]
     channel = await ctx.get_channel()
-    await ctx.channel.send("@everyone https://discord.gg/QwXXNGNkeh https://cdn.discordapp.com/attachments/898212567636381699/973453156535115807/Untitled.png", embeds=embeds)
+    await ctx.channel.send("https://cdn.discordapp.com/attachments/898212567636381699/973453156535115807/Untitled.png")
+    await ctx.channel.send("@everyone https://discord.gg/QwXXNGNkeh", embeds=embeds)
 bot.start()
