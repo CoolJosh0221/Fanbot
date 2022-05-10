@@ -238,5 +238,5 @@ async def rules(ctx):
 }
     embeds = [interactions.Embed(**embed) for embed in your_json["embeds"]]
     channel = await ctx.get_channel()
-    await ctx.channel.send("@everyone https://discord.gg/QwXXNGNkeh ", embeds=embeds)
+    await ctx.channel.send("@everyone https://discord.gg/QwXXNGNkeh https://cdn.discordapp.com/attachments/898212567636381699/973453156535115807/Untitled.png", embeds=embeds)
 bot.start()
