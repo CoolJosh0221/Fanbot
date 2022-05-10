@@ -8,19 +8,22 @@ from dotenv import load_dotenv
 from random import randint
 load_dotenv()
 token = os.getenv("TOKEN")
+presence = interactions.ClientPresence(activities=[interactions.PresenceActivity(name='Fansom', type=0)], afk=True, status="idle")
+bot = interactions.Client(token=token, presence=presence)
 
-bot = interactions.Client(
-    token = token,
-    presence=interactions.ClientPresence(
-        activities=[
-            interactions.PresenceActivity(
-                type=interactions.PresenceActivityType.GAME,
-                name="Fansom"
-            )
-        ],
-        status=interactions.StatusType.DND
-    )
-)
+# bot = interactions.Client(
+#     token = token,
+#     presence=interactions.ClientPresence(
+#         activities=[
+#             interactions.PresenceActivity(
+#                 type=interactions.PresenceActivityType.GAME,
+#                 name="Fansom"
+#             )
+#         ],
+#         afk=True,
+#         status=interactions.StatusType.IDLE
+#     )
+# )
 
 
 @bot.event
