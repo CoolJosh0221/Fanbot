@@ -46,7 +46,7 @@ async def ping(ctx: interactions.CommandContext):
 async def help(ctx: interactions.CommandContext):
     mention = ctx.author.mention
     member = ctx.author
-    await ctx.send(f"{mention} DMed")
+    await ctx.send(f"{mention} DMed.")
     embed = interactions.Embed(title="Help")
     await member.send(embeds=embed)
 
@@ -63,7 +63,7 @@ async def support(ctx: interactions.CommandContext):
             url="https://discord.gg/QwXXNGNkeh"
         )
     ]
-    await ctx.send(content="Here you go!", components=button)
+    await ctx.send(content="Here you go! ", components=button)
 
 
 @bot.command(
